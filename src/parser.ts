@@ -54,7 +54,7 @@ class autoMap extends Map {
 }
 
 function parseMeta(meta: string): any {
-    const lines = meta.split("\r\n");
+    const lines = meta.split(/\r\n|\r|\n/);
     const metaMap = new autoMap();
     for (const line of lines) {
         const [, key, value] = line.match(/^\/\/(?:\s+)@(\S+)\s+(.+)/);
@@ -66,8 +66,8 @@ function parseMeta(meta: string): any {
 }
 
 function devider(sourceCode: string): { meta: string; body: string } {
-    const l = "// ==UserScript==",
-        r = "// ==/UserScript==";
+    const l = String.raw`// ==UserScript==`,
+        r = String.raw`// ==/UserScript==`;
     const start = sourceCode.indexOf(l);
     const end = sourceCode.indexOf(r);
     const meta = sourceCode.substring(start + l.length, end).trim();
@@ -87,7 +87,7 @@ function parseAll(code: string): Susl {
         icon: metaObj.icon || "",
         description: metaObj.description || "",
         homepage: metaObj.homepage || "",
-        require: metaObj.require.replaceAll(" ", " ").split(" ") || [],
+        require: metaObj.require?.replaceAll(" ", " ").split(" ") || [],
         resource: metaObj.resource || [],
     };
     return resp;
