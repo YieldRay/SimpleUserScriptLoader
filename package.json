@@ -1,0 +1,15 @@
+{
+  "name": "simpleuserscriptloader",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/susl.js",
+  "scripts": {
+    "start": "ts-node susl.ts",
+    "build": "tsc",
+    "dev": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

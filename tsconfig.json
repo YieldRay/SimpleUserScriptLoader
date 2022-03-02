@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "lib": ["es2020", "dom"],
+        "target": "es2020",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outDir": "dist",
+        "sourceMap": true
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "*.js"]
+}
