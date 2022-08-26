@@ -12,7 +12,7 @@
 ## build
 
 ```sh
-tsc
+tsc # 全局安装typescript
 ```
 
 ## usage
