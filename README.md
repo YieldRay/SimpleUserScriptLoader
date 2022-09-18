@@ -7,7 +7,7 @@
 目前未判断@match  
 无视 @run-at，脚本直接通过 eval 执行  
 很多功能未实现，仅供练手，未兼容低版本浏览器  
-测试： <https://susl.netlify.app/>
+测试： <https://yieldray.github.io/SimpleUserScriptLoader/>
 
 ## build
 
